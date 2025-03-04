@@ -18,22 +18,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 
-vim.g.autoformat = true
-vim.g.lazyvim_picker = "auto"
-
-local opt = vim.opt
-
-opt.confirm = true 
-opt.cursorline = true
-opt.cursorline = true
-opt.expandtab = true
-opt.number = true
-opt.relativenumber = true
-opt.smartcase = true
-opt.smartindent = true
+--vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+require("options")
+require("keymaps")
 
 -- Setup lazy.nvim
 require("lazy").setup({
